@@ -1,0 +1,32 @@
+# 配置freemarker
+spring:
+  freemarker:
+    # 设置模板后缀名
+    suffix: .ftl
+    # 设置文档类型
+    content-type: text/html
+    # 设置页面编码格式
+    charset: UTF-8
+    # 设置页面缓存
+    cache: false
+    # 设置ftl文件路径
+    template-loader-path:
+    - classpath:/templates
+  # 设置静态文件路径，js,css等
+  mvc:
+    static-path-pattern: /static/**
+  session:
+    store-type: redis
+  redis:
+    host: 192.168.1.101
+    port: 6379
+    password: 123456
+    timeout: 60s
+
+#设置session过期时间
+server:
+  port: 8080
+
+# 日志文件名称
+logging:
+  file: C:/scheme/log/scheme.log
